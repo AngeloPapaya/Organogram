@@ -70,53 +70,31 @@ for(int i=0;i<companiesInfoo.size();i++) { //petla zewnetrzna, sorting by hierar
 }
 
 
-std::vector<std::string> Signs= {"->"};
+std::vector<std::string> Signs;
     for (auto j = 0; j < companiesInfoo.size(); ++j)
-            Signs.push_back(Signs[j]);
+            Signs.push_back("->");
 
 
 
 
- int level = 0;
-        for (auto i = 0; i < companiesInfoo.size(); ++i)
-        {
-            if (companiesInfoo[i].idlinked == companiesInfoo[i+1].idlinked)
-            {
+static int level = 0;
 
-
-                for (auto k =0; k <= level; ++k)
-                    {
-                        std::cout << " ";
-                    }
-//                    level++;
-            }
-            else if (i!=0) {
-                if (companiesInfoo[i-1].idlinked == companiesInfoo[i].idlinked) {
-                        for (auto k =0; k <= level; ++k)
-                    {
-                        std::cout << " ";
-                    }
-                    level++;
-                    std::cout << Signs[i] << companiesInfoo[i].id << " " << companiesInfoo[i].idlinked << " " << companiesInfoo[i].name << " " <<
-                    companiesInfoo[i].lastname << " " << companiesInfoo[i].position << "\n";
-                    continue;
-                     level++;
-                }
-            }
-
-            else
+for (auto i = 0; i < companiesInfoo.size(); ++i)
 {
-    //level++;
-}
-            std::cout << Signs[i] << companiesInfoo[i].id << " " << companiesInfoo[i].idlinked << " " << companiesInfoo[i].name << " " <<
+    for (auto k =0; k < level; ++k)
+    {
+        std::cout << "  ";
+    }
+    if (companiesInfoo[i].idlinked != companiesInfoo[i+1].idlinked && i < companiesInfoo.size() - 1)
+    {
+            level++;
+    }
+
+    std::cout << (i == 0 ? "" : Signs[i]) << companiesInfoo[i].id << " " <<companiesInfoo[i].name << " " <<
                     companiesInfoo[i].lastname << " " << companiesInfoo[i].position << "\n";
 
 }
-
-
-
-
-
 
 	return 0;
 }
+
