@@ -1,0 +1,56 @@
+# depslib dependency file v1.0
+1717254764 source:/home/ricoevil13/Test/main.cpp
+	"OrganogramLinesProviderFromFile.h"
+	<fstream>
+	<vector>
+	<iostream>
+	<array>
+	<string>
+	<sstream>
+
+1717254753 /home/ricoevil13/Test/OrganogramLinesProviderFromFile.h
+	<string>
+	<vector>
+
+1717254742 source:/home/ricoevil13/Test/OrganogramLinesProviderFromFile.cpp
+	"OrganogramLinesProviderFromFile.h"
+	<fstream>
+	<vector>
+	<iostream>
+	<array>
+	<string>
+	<sstream>
+
+1717255470 source:/home/ricoevil13/Organogram/OrganogramLinesProviderFromFile.cpp
+	"OrganogramLinesProviderFromFile.h"
+	<fstream>
+	<vector>
+	<iostream>
+	<array>
+	<string>
+	<sstream>
+
+1717256788 /home/ricoevil13/Organogram/OrganogramLinesProviderFromFile.h
+	<string>
+	<vector>
+
+1717325666 source:/home/ricoevil13/Organogram/Program.cpp
+	"OrganogramLinesProviderFromFile.h"
+	"OrganogramPersonalInfo.h"
+	<fstream>
+	<vector>
+	<iostream>
+	<array>
+	<string>
+	<sstream>
+	<algorithm>
+	<set>
+
+1717259478 /home/ricoevil13/Organogram/OrganogramPersonalInfo.h
+	<vector>
+	<map>
+	<string>
+
+1717258557 source:/home/ricoevil13/Organogram/OrganogramPersonalInfo.cpp
+	"OrganogramPersonalInfo.h"
+
