@@ -2,6 +2,7 @@
 #include "OrganogramPersonalInfo.h"
 #include "MenuOption.h"
 #include "OrganogramDisplay.h"
+#include "OrganogramCompanySorter.h"
 
 #include <fstream>
 #include <vector>
@@ -17,7 +18,7 @@
 int main(int argc, char* argv[])
 {
         OrganogramLinesProviderFromFile linesProvider("companies_data.csv");
-        auto res = linesProvider.GetOrganogramLines();
+        auto res = linesProvider.getOrganogramLines();
 
 
 
@@ -37,7 +38,6 @@ int main(int argc, char* argv[])
 
 
 
-
 for (auto z = 0; z < companiesNames.size(); ++z)
 {
 
@@ -50,22 +50,11 @@ std::vector<std::string> Signs;
             Signs.push_back("->");
 
 
-
-for(int i = 0; i < companiesInfoo.size(); i++)
-{
-        for(int j = 1; j < companiesInfoo.size() - i; j++)
-        {
-            if (companiesInfoo[j-1].id != companiesInfoo[j].idlinked )
-                if(companiesInfoo[j-1].idlinked != companiesInfoo[j].idlinked)
-                    std::swap(companiesInfoo[j-1], companiesInfoo[j]);
-        }
-}
-
-
+CompanySort companysort;
+std::vector<PersonalInfo::PersonalInfoIndex> sortedCompany = companysort.sortedCompany(companiesInfoo);
 std::cout << companiesNames[z] << "\n";
 DisplayHierarchy displayhierarchy;
-displayhierarchy.displayHierarchy(Signs,companiesInfoo);
-std::cout << "\n\n";
+displayhierarchy.displayHierarchy(Signs,sortedCompany);
 
 }
 

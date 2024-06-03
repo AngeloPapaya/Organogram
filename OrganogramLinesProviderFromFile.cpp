@@ -3,7 +3,7 @@
 
 
 
-std::vector<std::vector<std::string>> OrganogramLinesProviderFromFile::GetOrganogramLines()
+std::vector<std::vector<std::string>> OrganogramLinesProviderFromFile::getOrganogramLines()
     {
         std::ifstream file(_fileName);
         std::string line;

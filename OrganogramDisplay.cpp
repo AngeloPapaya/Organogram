@@ -2,11 +2,11 @@
 #include "OrganogramPersonalInfo.h"
 
 
-void DisplayHierarchy::displayHierarchy(const std::vector<std::string>&Signs, const std::vector<PersonalInfo::PersonalInfoIndex> &companiesInfoo )
+void DisplayHierarchy::displayHierarchy(const std::vector<std::string>&Signs, const std::vector<PersonalInfo::PersonalInfoIndex> &companiesInfo )
 {
 
 
-std::vector<PersonalInfo::PersonalInfoIndex> companiesInfo = companiesInfoo ;
+std::vector<PersonalInfo::PersonalInfoIndex> companiesInfoo = companiesInfo;
 std::vector <std::string> Signss = Signs;
     for (auto i = 0; i < companiesInfoo.size(); ++i)
     {
@@ -19,10 +19,11 @@ std::vector <std::string> Signss = Signs;
                 level++;
         }
 
-        std::cout << (i == 0 ? "" : Signs[i]) << companiesInfoo[i].id << " " << companiesInfoo[i].idlinked <<  " " <<companiesInfoo[i].name << " " <<
+        std::cout << (i == 0 ? "" : Signss[i]) << companiesInfoo[i].id << " " << companiesInfoo[i].idlinked <<  " " <<companiesInfoo[i].name << " " <<
                         companiesInfoo[i].lastname << " " << companiesInfoo[i].position << "\n";
 
     }
+    std::cout << "\n\n";
 
 
 }

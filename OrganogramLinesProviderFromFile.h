@@ -21,6 +21,6 @@ public:
 
         }
 
-    std::vector<std::vector<std::string>> GetOrganogramLines();
+    std::vector<std::vector<std::string>> getOrganogramLines();
 
 };
