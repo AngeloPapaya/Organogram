@@ -1,5 +1,7 @@
 #include "OrganogramLinesProviderFromFile.h"
 #include "OrganogramPersonalInfo.h"
+#include "MenuOption.h"
+#include "OrganogramDisplay.h"
 
 #include <fstream>
 #include <vector>
@@ -18,56 +20,29 @@ int main(int argc, char* argv[])
         auto res = linesProvider.GetOrganogramLines();
 
 
-std::string company;
-int userInput;
 
-std::cout << "Please choose company: " << "\n";
 
-std::cout << "1. Oracle" << "\n" << "2. IBM" << "\n" << "3. Microsoft" << "\n";
-std::cin >> userInput;
+                                std::vector<std::string> companiesNames;
 
-    switch (userInput)
-    {
-    case 1:
-        company = "Oracle";
-        break;
-    case 2:
-        company = "IBM";
-        break;
-    case 3:
-        company = "Microsoft";
-        break;
-    }
-    std::vector<PersonalInfo::PersonalInfoIndex> companiesInfoo;
+                            for (auto  j = 0; j < res.size(); j++)
+                            {
+
+                                companiesNames.push_back(res[j][4]);
+                            }
+
+                            std::sort(companiesNames.begin(), companiesNames.end());
+                            auto last = std::unique(companiesNames.begin(), companiesNames.end());
+                            companiesNames.erase(last, companiesNames.end());
 
 
 
-for(auto i = 0; i < res.size(); ++i)
+
+
+for (auto z = 0; z < companiesNames.size(); ++z)
 {
-    if (res[i][4] == company)
-    {
-        PersonalInfo::PersonalInfoIndex p1;
-        p1.id = std::stoi(res[i][0]);
-        p1.idlinked = std::stoi(res[i][1]);
-        p1.name = res[i][2];
-        p1.lastname = res[i][3];
-        p1.company = res[i][4];
-        p1.city = res[i][5];
-        p1.position = res[i][6];
 
-        companiesInfoo.push_back(p1);
-    }
-}
-
-for(int i=0;i<companiesInfoo.size();i++) { //petla zewnetrzna, sorting by hierarchy
-    for(int j=1;j<companiesInfoo.size()-i;j++) { //pętla wewnętrzna
-        if (companiesInfoo[j-1].idlinked == companiesInfoo[j].idlinked && companiesInfoo[j-1].id>companiesInfoo[j].id) {
-            std::swap(companiesInfoo[j-1], companiesInfoo[j]);
-        } else if(companiesInfoo[j-1].idlinked>companiesInfoo[j].idlinked) {
-            std::swap(companiesInfoo[j-1], companiesInfoo[j]);
-        }
-    }
-}
+PersonalInfo personalinfoindex;
+std::vector<PersonalInfo::PersonalInfoIndex> companiesInfoo = personalinfoindex.createPersonalInfoIndexVector(res, companiesNames[z]);
 
 
 std::vector<std::string> Signs;
@@ -76,22 +51,21 @@ std::vector<std::string> Signs;
 
 
 
-
-static int level = 0;
-
-for (auto i = 0; i < companiesInfoo.size(); ++i)
+for(int i = 0; i < companiesInfoo.size(); i++)
 {
-    for (auto k =0; k < level; ++k)
-    {
-        std::cout << "  ";
-    }
-    if (companiesInfoo[i].idlinked != companiesInfoo[i+1].idlinked && i < companiesInfoo.size() - 1)
-    {
-            level++;
-    }
+        for(int j = 1; j < companiesInfoo.size() - i; j++)
+        {
+            if (companiesInfoo[j-1].id != companiesInfoo[j].idlinked )
+                if(companiesInfoo[j-1].idlinked != companiesInfoo[j].idlinked)
+                    std::swap(companiesInfoo[j-1], companiesInfoo[j]);
+        }
+}
 
-    std::cout << (i == 0 ? "" : Signs[i]) << companiesInfoo[i].id << " " <<companiesInfoo[i].name << " " <<
-                    companiesInfoo[i].lastname << " " << companiesInfoo[i].position << "\n";
+
+std::cout << companiesNames[z] << "\n";
+DisplayHierarchy displayhierarchy;
+displayhierarchy.displayHierarchy(Signs,companiesInfoo);
+std::cout << "\n\n";
 
 }
 

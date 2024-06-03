@@ -18,7 +18,7 @@ public:
         std::string city;
         std::string position;
     };
-    std::map<std::string, std::vector<PersonalInfoIndex>> companiesInfo;
+    std::vector<PersonalInfo::PersonalInfoIndex> createPersonalInfoIndexVector(const std::vector<std::vector<std::string>>&res, const std::string& companyName);
 };
 
 

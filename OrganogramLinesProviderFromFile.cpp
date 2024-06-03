@@ -1,11 +1,6 @@
 #include "OrganogramLinesProviderFromFile.h"
 
-#include <fstream>
-#include <vector>
-#include <iostream>
-#include <array>
-#include <string>
-#include <sstream>
+
 
 
 std::vector<std::vector<std::string>> OrganogramLinesProviderFromFile::GetOrganogramLines()
