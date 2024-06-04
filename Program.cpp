@@ -16,6 +16,7 @@
 
 
 int main(int argc, char* argv[])
+
 {
         OrganogramLinesProviderFromFile linesProvider("companies_data.csv");
         auto res = linesProvider.getOrganogramLines();

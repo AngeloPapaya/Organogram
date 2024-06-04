@@ -32,6 +32,10 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="OrganogramCompanySorter.cpp" />
+		<Unit filename="OrganogramCompanySorter.h" />
+		<Unit filename="OrganogramDisplay.cpp" />
+		<Unit filename="OrganogramDisplay.h" />
 		<Unit filename="OrganogramLinesProviderFromFile.cpp" />
 		<Unit filename="OrganogramLinesProviderFromFile.h" />
 		<Unit filename="OrganogramPersonalInfo.cpp" />
