@@ -1,17 +1,12 @@
 #include "OrganogramLinesProviderFromFile.h"
 #include "OrganogramPersonalInfo.h"
-#include "MenuOption.h"
 #include "OrganogramDisplay.h"
 #include "OrganogramCompanySorter.h"
 
-#include <fstream>
 #include <vector>
 #include <iostream>
-#include <array>
-#include <string>
-#include <sstream>
 #include <algorithm>
-#include <set>
+
 
 
 

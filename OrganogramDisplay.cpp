@@ -5,22 +5,19 @@
 void DisplayHierarchy::displayHierarchy(const std::vector<std::string>&Signs, const std::vector<PersonalInfo::PersonalInfoIndex> &companiesInfo )
 {
 
-
-std::vector<PersonalInfo::PersonalInfoIndex> companiesInfoo = companiesInfo;
-std::vector <std::string> Signss = Signs;
-    for (auto i = 0; i < companiesInfoo.size(); ++i)
+    for (auto i = 0; i < companiesInfo.size(); ++i)
     {
         for (auto k =0; k < level; ++k)
         {
             std::cout << " ";
         }
-        if (companiesInfoo[i].idlinked != companiesInfoo[i+1].idlinked && i < companiesInfoo.size() - 1)
+        if (companiesInfo[i].idlinked != companiesInfo[i+1].idlinked && i < companiesInfo.size() - 1)
         {
                 level++;
         }
 
-        std::cout << (i == 0 ? "" : Signss[i]) << companiesInfoo[i].id << " " << companiesInfoo[i].idlinked <<  " " <<companiesInfoo[i].name << " " <<
-                        companiesInfoo[i].lastname << " " << companiesInfoo[i].position << "\n";
+        std::cout << (i == 0 ? "" : Signs[i]) << companiesInfo[i].id << " " << companiesInfo[i].idlinked <<  " " <<companiesInfo[i].name << " " <<
+                        companiesInfo[i].lastname << " " << companiesInfo[i].position << "\n";
 
     }
     std::cout << "\n\n";
