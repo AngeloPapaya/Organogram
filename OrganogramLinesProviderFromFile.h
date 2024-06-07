@@ -13,6 +13,8 @@ class OrganogramLinesProviderFromFile
 {
 private:
         std::string _fileName;
+        std::string line;
+
 public:
 
         explicit OrganogramLinesProviderFromFile(const std::string& fileName)

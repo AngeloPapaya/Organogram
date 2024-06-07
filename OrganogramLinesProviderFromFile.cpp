@@ -6,7 +6,6 @@
 std::vector<std::vector<std::string>> OrganogramLinesProviderFromFile::getOrganogramLines()
     {
         std::ifstream file(_fileName);
-        std::string line;
         std::vector <std::vector<std::string>> results; //big vector which contains all rows
 
             if (!file.is_open())

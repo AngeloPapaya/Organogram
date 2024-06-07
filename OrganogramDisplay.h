@@ -11,5 +11,5 @@ class DisplayHierarchy
 
 public:
     int level =0;
-    void displayHierarchy(const std::vector<std::string>&Signs, const std::vector<PersonalInfo::PersonalInfoIndex> &companiesInfoo );
+    void displayHierarchy(const std::vector<PersonalInfo::PersonalInfoIndex> &companiesInfoo );
 };

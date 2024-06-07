@@ -7,5 +7,5 @@ class CompanySort
 {
 
 public:
-    std::vector<PersonalInfo::PersonalInfoIndex> sortedCompany (const std::vector<PersonalInfo::PersonalInfoIndex> &companiesInfo);
+    std::vector<PersonalInfo::PersonalInfoIndex> sortedCompany (const std::vector<PersonalInfo::PersonalInfoIndex> &companiesInfo, PersonalInfo::PersonalInfoIndex &root);
 };

@@ -65,7 +65,7 @@
 	<string>
 	<sstream>
 
-1717433945 source:c:\users\angelopapaya\documents\c++\organogram\organogram\organogrampersonalinfo.cpp
+1717527335 source:c:\users\angelopapaya\documents\c++\organogram\organogram\organogrampersonalinfo.cpp
 	"OrganogramPersonalInfo.h"
 
 1717433977 c:\users\angelopapaya\documents\c++\organogram\organogram\organogrampersonalinfo.h
@@ -73,7 +73,7 @@
 	<map>
 	<string>
 
-1717526905 source:c:\users\angelopapaya\documents\c++\organogram\organogram\program.cpp
+1717758572 source:c:\users\angelopapaya\documents\c++\organogram\organogram\program.cpp
 	"OrganogramLinesProviderFromFile.h"
 	"OrganogramPersonalInfo.h"
 	"OrganogramDisplay.h"
@@ -89,20 +89,21 @@
 1717358996 c:\users\angelopapaya\documents\c++\organogram\organogram\menuoption.h
 	<string>
 
-1717527019 source:c:\users\angelopapaya\documents\c++\organogram\organogram\organogramdisplay.cpp
+1717748727 source:c:\users\angelopapaya\documents\c++\organogram\organogram\organogramdisplay.cpp
 	"OrganogramDisplay.h"
 	"OrganogramPersonalInfo.h"
 
-1717436909 c:\users\angelopapaya\documents\c++\organogram\organogram\organogramdisplay.h
+1717743525 c:\users\angelopapaya\documents\c++\organogram\organogram\organogramdisplay.h
 	<vector>
 	<map>
 	<string>
 	<iostream>
 	"OrganogramPersonalInfo.h"
 
-1717442418 source:c:\users\angelopapaya\documents\c++\organogram\organogram\organogramcompanysorter.cpp
+1717747963 source:c:\users\angelopapaya\documents\c++\organogram\organogram\organogramcompanysorter.cpp
 	"OrganogramCompanySorter.h"
+	<algorithm>
 
-1717438550 c:\users\angelopapaya\documents\c++\organogram\organogram\organogramcompanysorter.h
+1717747631 c:\users\angelopapaya\documents\c++\organogram\organogram\organogramcompanysorter.h
 	"OrganogramPersonalInfo.h"
 
