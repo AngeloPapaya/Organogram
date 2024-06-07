@@ -3,6 +3,7 @@
 #include <vector>
 #include <map>
 #include <string>
+#include <set>
 
 class PersonalInfo
 {
@@ -11,7 +12,7 @@ public:
     struct PersonalInfoIndex
     {
         int id;
-        int idlinked;
+        int parentid;
         std::string name;
         std::string lastname;
         std::string company;

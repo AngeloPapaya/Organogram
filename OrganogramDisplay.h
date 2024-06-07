@@ -2,14 +2,18 @@
 
 #include <vector>
 #include <map>
-#include <string>
 #include <iostream>
+#include "OrganogramCompanySorter.h"
 #include "OrganogramPersonalInfo.h"
+
 
 class DisplayHierarchy
 {
 
 public:
+//    DisplayHierarchy displayhierarchy;
+    PersonalInfo::PersonalInfoIndex root;
     int level =0;
-    void displayHierarchy(const std::vector<PersonalInfo::PersonalInfoIndex> &companiesInfoo );
+    void displayHierarchy(const std::vector<PersonalInfo::PersonalInfoIndex> &companiesInfo );
 };
+

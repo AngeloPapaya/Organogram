@@ -9,7 +9,7 @@ std::vector<PersonalInfo::PersonalInfoIndex> PersonalInfo::createPersonalInfoInd
         if (res[i][4] == companyName) {
             PersonalInfoIndex p1;
             p1.id = std::stoi(res[i][0]);
-            p1.idlinked = std::stoi(res[i][1]);
+            p1.parentid = std::stoi(res[i][1]);
             p1.name = res[i][2];
             p1.lastname = res[i][3];
             p1.company = res[i][4];

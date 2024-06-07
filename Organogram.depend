@@ -107,27 +107,30 @@
 1717759620 c:\users\angelopapaya\documents\c++\organogram\organogram\organogramcompanysorter.h
 	"OrganogramPersonalInfo.h"
 
-1717767979 source:/home/ricoevil13/Organogram/Organogram/OrganogramCompanySorter.cpp
+1717789139 source:/home/ricoevil13/Organogram/Organogram/OrganogramCompanySorter.cpp
 	"OrganogramCompanySorter.h"
 	<algorithm>
+	<iostream>
 
-1717767979 /home/ricoevil13/Organogram/Organogram/OrganogramCompanySorter.h
-	"OrganogramPersonalInfo.h"
-
-1717766737 /home/ricoevil13/Organogram/Organogram/OrganogramPersonalInfo.h
-	<vector>
-	<map>
-	<string>
-
-1717766737 source:/home/ricoevil13/Organogram/Organogram/OrganogramDisplay.cpp
+1717790051 /home/ricoevil13/Organogram/Organogram/OrganogramCompanySorter.h
 	"OrganogramDisplay.h"
 	"OrganogramPersonalInfo.h"
 
-1717766737 /home/ricoevil13/Organogram/Organogram/OrganogramDisplay.h
+1717788733 /home/ricoevil13/Organogram/Organogram/OrganogramPersonalInfo.h
 	<vector>
 	<map>
 	<string>
+	<set>
+
+1717783397 source:/home/ricoevil13/Organogram/Organogram/OrganogramDisplay.cpp
+	"OrganogramDisplay.h"
+	"OrganogramPersonalInfo.h"
+
+1717789796 /home/ricoevil13/Organogram/Organogram/OrganogramDisplay.h
+	<vector>
+	<map>
 	<iostream>
+	"OrganogramCompanySorter.h"
 	"OrganogramPersonalInfo.h"
 
 1717766737 source:/home/ricoevil13/Organogram/Organogram/OrganogramLinesProviderFromFile.cpp
@@ -141,16 +144,33 @@
 	<string>
 	<sstream>
 
-1717766737 source:/home/ricoevil13/Organogram/Organogram/OrganogramPersonalInfo.cpp
+1717783274 source:/home/ricoevil13/Organogram/Organogram/OrganogramPersonalInfo.cpp
 	"OrganogramPersonalInfo.h"
 
-1717767979 source:/home/ricoevil13/Organogram/Organogram/Program.cpp
+1717787409 source:/home/ricoevil13/Organogram/Organogram/Program.cpp
 	"OrganogramLinesProviderFromFile.h"
 	"OrganogramPersonalInfo.h"
 	"OrganogramDisplay.h"
 	"OrganogramCompanySorter.h"
+	"OrganogramCompaniesName.h"
 	<vector>
 	<iostream>
 	<algorithm>
 	<set>
+
+1717784522 source:/home/ricoevil13/Organogram/Organogram/CompaniesNames.cpp
+	"CompaniesNames.h"
+
+1717784511 /home/ricoevil13/Organogram/Organogram/CompaniesNames.h
+	<set>
+	<string>
+	<vector>
+
+1717786925 source:/home/ricoevil13/Organogram/Organogram/OrganogramCompaniesName.cpp
+	"OrganogramCompaniesName.h"
+
+1717786941 /home/ricoevil13/Organogram/Organogram/OrganogramCompaniesName.h
+	<set>
+	<string>
+	<vector>
 

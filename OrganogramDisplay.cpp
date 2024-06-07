@@ -2,25 +2,33 @@
 #include "OrganogramPersonalInfo.h"
 
 
-void DisplayHierarchy::displayHierarchy(const std::vector<PersonalInfo::PersonalInfoIndex> &companiesInfo )
+void DisplayHierarchy::displayHierarchy(const std::vector<PersonalInfo::PersonalInfoIndex> &companiesInfo)
 {
+    CompanySort companysort;
+    for (auto & i : companiesInfo) {
+        root = i;
+        auto leaves = companysort.createLeaveForRoot(companiesInfo,root);
 
-    for (auto i = 0; i < companiesInfo.size(); ++i)
-    {
-        for (auto k =0; k < level; ++k)
-        {
-            std::cout << " ";
-        }
-        if (companiesInfo[i].idlinked != companiesInfo[i+1].idlinked && i < companiesInfo.size() - 1)
-        {
+        companysort.sortByID(leaves);
+
+        for (auto j = 0; j < leaves.size(); ++j) {
+
+                if (j == 0 || (leaves[j].parentid != leaves[j-1].parentid))
+            {
                 level++;
+            }
+
+            for (auto k =0; k < level ; ++k)
+            {
+                std::cout << " ";
+            }
+
+            std::cout << "->" << leaves[j].id << " " << leaves[j].parentid << " " << leaves[j].name << " " << leaves[j].lastname << "\n";
         }
 
-        std::cout << (i == 0 ? "" : "->") << companiesInfo[i].id << " " << companiesInfo[i].idlinked <<  " " <<companiesInfo[i].name << " " <<
-                        companiesInfo[i].lastname << " " << companiesInfo[i].position << "\n";
 
-    }
-    //std::cout << "\n\n";
+} std::cout << "\n";
+
 
 
 }
