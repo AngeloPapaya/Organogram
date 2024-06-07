@@ -107,3 +107,50 @@
 1717759620 c:\users\angelopapaya\documents\c++\organogram\organogram\organogramcompanysorter.h
 	"OrganogramPersonalInfo.h"
 
+1717767979 source:/home/ricoevil13/Organogram/Organogram/OrganogramCompanySorter.cpp
+	"OrganogramCompanySorter.h"
+	<algorithm>
+
+1717767979 /home/ricoevil13/Organogram/Organogram/OrganogramCompanySorter.h
+	"OrganogramPersonalInfo.h"
+
+1717766737 /home/ricoevil13/Organogram/Organogram/OrganogramPersonalInfo.h
+	<vector>
+	<map>
+	<string>
+
+1717766737 source:/home/ricoevil13/Organogram/Organogram/OrganogramDisplay.cpp
+	"OrganogramDisplay.h"
+	"OrganogramPersonalInfo.h"
+
+1717766737 /home/ricoevil13/Organogram/Organogram/OrganogramDisplay.h
+	<vector>
+	<map>
+	<string>
+	<iostream>
+	"OrganogramPersonalInfo.h"
+
+1717766737 source:/home/ricoevil13/Organogram/Organogram/OrganogramLinesProviderFromFile.cpp
+	"OrganogramLinesProviderFromFile.h"
+
+1717766737 /home/ricoevil13/Organogram/Organogram/OrganogramLinesProviderFromFile.h
+	<fstream>
+	<vector>
+	<iostream>
+	<array>
+	<string>
+	<sstream>
+
+1717766737 source:/home/ricoevil13/Organogram/Organogram/OrganogramPersonalInfo.cpp
+	"OrganogramPersonalInfo.h"
+
+1717767979 source:/home/ricoevil13/Organogram/Organogram/Program.cpp
+	"OrganogramLinesProviderFromFile.h"
+	"OrganogramPersonalInfo.h"
+	"OrganogramDisplay.h"
+	"OrganogramCompanySorter.h"
+	<vector>
+	<iostream>
+	<algorithm>
+	<set>
+
