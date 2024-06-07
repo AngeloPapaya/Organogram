@@ -6,6 +6,7 @@
 #include <vector>
 #include <iostream>
 #include <algorithm>
+#include <set>
 
 
 int main(int argc, char* argv[])
@@ -15,28 +16,22 @@ int main(int argc, char* argv[])
         auto res = linesProvider.getOrganogramLines();
 
 
-
-
-                                std::vector<std::string> companiesNames;
+                                std::set<std::string> companiesNames;
 
                             for (auto  j = 0; j < res.size(); j++)
                             {
 
-                                companiesNames.push_back(res[j][4]);
+                                companiesNames.insert(res[j][4]);
                             }
 
-                            std::sort(companiesNames.begin(), companiesNames.end());
-                            auto last = std::unique(companiesNames.begin(), companiesNames.end());
-                            companiesNames.erase(last, companiesNames.end());
 
 
 
-
-for (auto z = 0; z < companiesNames.size(); ++z)
+for (auto companiesnamesiterator = companiesNames.begin(); companiesnamesiterator != companiesNames.end(); ++companiesnamesiterator)
 {
 int level =0;
 PersonalInfo personalinfoindex;
-std::vector<PersonalInfo::PersonalInfoIndex> companiesInfoo = personalinfoindex.createPersonalInfoIndexVector(res, companiesNames[z]);
+std::vector<PersonalInfo::PersonalInfoIndex> companiesInfoo = personalinfoindex.createPersonalInfoIndexVector(res, *companiesnamesiterator);
 
 
 
@@ -49,7 +44,7 @@ std::sort(companiesInfoo.begin(), companiesInfoo.end(), [](const PersonalInfo::P
 
  PersonalInfo::PersonalInfoIndex root = companiesInfoo[0];
 CompanySort companysort;
-std::cout << companiesNames[z] << "\n";
+std::cout << *companiesnamesiterator << "\n";
 DisplayHierarchy displayhierarchy;
 
 std::cout << root.id << " " << root.idlinked << " " << root.name << " " << root.lastname << "\n";
