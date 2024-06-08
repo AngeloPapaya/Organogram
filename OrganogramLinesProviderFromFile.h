@@ -3,13 +3,11 @@
 #include <fstream>
 #include <vector>
 #include <iostream>
-#include <array>
 #include <string>
 #include <sstream>
 
 
 class OrganogramLinesProviderFromFile
-
 {
 private:
         std::string _fileName;

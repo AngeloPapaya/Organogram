@@ -18,27 +18,13 @@ int main(int argc, char* argv[])
 
 CompanyName companyname;
 CompanySort companysort;
-DisplayHierarchy displayhierarchy;
+
 auto companiesNames = companyname.createSetofCompaniesNames(res);
 
+companysort.sortHierarchy(res, companiesNames);
 
-for (auto companiesnamesiterator = companiesNames.begin(); companiesnamesiterator != companiesNames.end(); ++companiesnamesiterator) //iteration for each company
-{
-    int level =0;//setting hierarchy using spaces
 
-    PersonalInfo personalinfoindex;
-    auto companiesInfoo = personalinfoindex.createPersonalInfoIndexVector(res, *companiesnamesiterator);
 
-    companysort.sortByIDlinked(companiesInfoo);
-
-    PersonalInfo::PersonalInfoIndex root = companiesInfoo[0];
-
-    std::cout <<*companiesnamesiterator << "\n" << root.id << " " << root.parentid << " " << root.name << " " << root.lastname << "\n";
-    DisplayHierarchy displayhierarchy;
-    displayhierarchy.displayHierarchy(companiesInfoo);
-
+return 0;
 
 }
-	return 0;
-
-    }

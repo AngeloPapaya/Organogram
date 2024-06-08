@@ -1,14 +1,13 @@
 #pragma once
 
 #include <vector>
-#include <map>
 #include <string>
 #include <set>
 
 class PersonalInfo
 {
-public:
 
+public:
     struct PersonalInfoIndex
     {
         int id;

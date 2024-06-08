@@ -2,7 +2,9 @@
 #include <algorithm>
 #include <iostream>
 
-std::vector<PersonalInfo::PersonalInfoIndex> CompanySort::createLeaveForRoot(const std::vector<PersonalInfo::PersonalInfoIndex> &companiesInfo, PersonalInfo::PersonalInfoIndex &root)
+
+//this function creates 'leave' vector per company
+std::vector<PersonalInfo::PersonalInfoIndex> CompanySort::createLeaveForRoot(const std::vector<PersonalInfo::PersonalInfoIndex> &companiesInfo, const PersonalInfo::PersonalInfoIndex &root)
 {
 
 std::vector<PersonalInfo::PersonalInfoIndex> leaves;
@@ -17,8 +19,7 @@ std::vector<PersonalInfo::PersonalInfoIndex> leaves;
 
 }
 
-void CompanySort::sortByIDlinked(std::vector<PersonalInfo::PersonalInfoIndex>& object)
-
+void CompanySort::sortByIDlinked( std::vector<PersonalInfo::PersonalInfoIndex>& object) //this function sorts vector by parentid
 {
     std::sort(object.begin(), object.end(), [](const PersonalInfo::PersonalInfoIndex &a, const PersonalInfo::PersonalInfoIndex &b)
     {
@@ -27,8 +28,7 @@ void CompanySort::sortByIDlinked(std::vector<PersonalInfo::PersonalInfoIndex>& o
 
 }
 
-void CompanySort::sortByID(std::vector<PersonalInfo::PersonalInfoIndex>& object)
-
+void CompanySort::sortByID( std::vector<PersonalInfo::PersonalInfoIndex>& object) //this function sorts vector by id
 {
     std::sort(object.begin(), object.end(), [](const PersonalInfo::PersonalInfoIndex &a, const PersonalInfo::PersonalInfoIndex &b)
     {
@@ -37,23 +37,23 @@ void CompanySort::sortByID(std::vector<PersonalInfo::PersonalInfoIndex>& object)
 
 }
 
-void CompanySort::sortHierarchy(const std::vector<std::vector<std::string>>&res, const std::set<std::string>&companiesNames)
-
+void CompanySort::sortHierarchy(const std::vector<std::vector<std::string>>&res, const std::set<std::string>&companiesNames) //final function which shows hierarchy for each company
 {
-    DisplayHierarchy displayhierarchy;
+
     for (auto companiesnamesiterator = companiesNames.begin(); companiesnamesiterator != companiesNames.end(); ++companiesnamesiterator) //iteration for each company
     {
         int level =0;//setting hierarchy using spaces
 
         PersonalInfo personalinfoindex;
-        auto companiesInfoo = personalinfoindex.createPersonalInfoIndexVector(res, *companiesnamesiterator);
+        auto companiesInfo = personalinfoindex.createPersonalInfoIndexVector(res, *companiesnamesiterator);
 
-        sortByIDlinked(companiesInfoo);
+        sortByIDlinked(companiesInfo);
 
-        PersonalInfo::PersonalInfoIndex root = companiesInfoo[0];
+        PersonalInfo::PersonalInfoIndex root = companiesInfo[0];
 
-        std::cout <<*companiesnamesiterator << "\n" << root.id << " " << root.parentid << " " << root.name << " " << root.lastname << "\n";
-        displayhierarchy.displayHierarchy(companiesInfoo);
+        std::cout << *companiesnamesiterator << "\n" << root.id << " " << root.parentid << " " << root.name << " " << root.lastname << "\n";
+        DisplayHierarchy displayhierarchy;
+        displayhierarchy.displayHierarchy(companiesInfo);
 
 
     }
