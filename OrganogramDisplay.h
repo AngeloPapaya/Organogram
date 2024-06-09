@@ -11,7 +11,7 @@ class DisplayHierarchy
 
 public:
     PersonalInfo::PersonalInfoIndex root;
-    int level =0;
+    int levelOfDisplaying = 0;
     void displayHierarchy(const std::vector<PersonalInfo::PersonalInfoIndex> &companiesInfo );
 };
 

@@ -2,7 +2,7 @@
 
 
 //this function creates 'leave' vector per company
-std::vector<PersonalInfo::PersonalInfoIndex> CompanySort::createLeaveForRoot(const std::vector<PersonalInfo::PersonalInfoIndex> &companiesInfo, const PersonalInfo::PersonalInfoIndex &root)
+std::vector<PersonalInfo::PersonalInfoIndex> PrintSorted::createLeaveForRoot(const std::vector<PersonalInfo::PersonalInfoIndex> &companiesInfo, const PersonalInfo::PersonalInfoIndex &root)
 {
 
     std::vector<PersonalInfo::PersonalInfoIndex> leaves;
@@ -17,7 +17,7 @@ std::vector<PersonalInfo::PersonalInfoIndex> CompanySort::createLeaveForRoot(con
 
 }
 
-void CompanySort::sortByParentID(std::vector<PersonalInfo::PersonalInfoIndex>& object) //this function sorts vector by parentid
+void PrintSorted::sortByParentID(std::vector<PersonalInfo::PersonalInfoIndex>& object) //this function sorts vector by parentid
 {
     std::sort(object.begin(), object.end(), [](const PersonalInfo::PersonalInfoIndex &a, const PersonalInfo::PersonalInfoIndex &b)
     {
@@ -26,7 +26,7 @@ void CompanySort::sortByParentID(std::vector<PersonalInfo::PersonalInfoIndex>& o
 
 }
 
-void CompanySort::sortByID(std::vector<PersonalInfo::PersonalInfoIndex>& object) //this function sorts vector by id
+void PrintSorted::sortByID(std::vector<PersonalInfo::PersonalInfoIndex>& object) //this function sorts vector by id
 {
     std::sort(object.begin(), object.end(), [](const PersonalInfo::PersonalInfoIndex &a, const PersonalInfo::PersonalInfoIndex &b)
     {
@@ -35,7 +35,7 @@ void CompanySort::sortByID(std::vector<PersonalInfo::PersonalInfoIndex>& object)
 
 }
 
-void CompanySort::sortHierarchy(const std::vector<std::vector<std::string>>&res, const std::set<std::string>&companiesNames) //final function which shows hierarchy for each company
+void PrintSorted::sortHierarchyAndPrint(const std::vector<std::vector<std::string>>&res, const std::set<std::string>&companiesNames) //final function which shows hierarchy for each company
 {
 
     for (auto companiesnamesiterator = companiesNames.begin(); companiesnamesiterator != companiesNames.end(); ++companiesnamesiterator) //iteration for each company

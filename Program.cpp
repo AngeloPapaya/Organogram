@@ -12,12 +12,11 @@ int main(int argc, char* argv[])
     auto res = linesProvider.getOrganogramLines();
 
     CompanyName companyname;
-    CompanySort companysort;
-
+    PrintSorted printsorted;
 
     auto companiesNames = companyname.createSetofCompaniesNames(res);
 
-    companysort.sortHierarchy(res, companiesNames);
+    printsorted.sortHierarchyAndPrint(res, companiesNames);
 
 return 0;
 
