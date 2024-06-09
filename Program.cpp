@@ -16,7 +16,7 @@ int main(int argc, char* argv[])
 
     auto companiesNames = companyname.createSetofCompaniesNames(res);
 
-    printsorted.sortHierarchyAndPrint(res, companiesNames);
+    printsorted.PrintsortedHierarchy(res, companiesNames);
 
 return 0;
 

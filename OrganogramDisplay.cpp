@@ -25,10 +25,6 @@ void DisplayHierarchy::displayHierarchy(const std::vector<PersonalInfo::Personal
                 std::cout << "->" << leaves[j].id << " " << leaves[j].parentid << " " << leaves[j].name << " " << leaves[j].lastname << "\n";
         }
 
-
     }
     std::cout << "\n";
-
-
-
 }

@@ -1,6 +1,5 @@
 #include "OrganogramCompanySorter.h"
 
-
 //this function creates 'leave' vector per company
 std::vector<PersonalInfo::PersonalInfoIndex> PrintSorted::createLeaveForRoot(const std::vector<PersonalInfo::PersonalInfoIndex> &companiesInfo, const PersonalInfo::PersonalInfoIndex &root)
 {
@@ -35,7 +34,7 @@ void PrintSorted::sortByID(std::vector<PersonalInfo::PersonalInfoIndex>& object)
 
 }
 
-void PrintSorted::sortHierarchyAndPrint(const std::vector<std::vector<std::string>>&res, const std::set<std::string>&companiesNames) //final function which shows hierarchy for each company
+void PrintSorted::PrintsortedHierarchy(const std::vector<std::vector<std::string>>&res, const std::set<std::string>&companiesNames) //final function which shows hierarchy for each company
 {
 
     for (auto companiesnamesiterator = companiesNames.begin(); companiesnamesiterator != companiesNames.end(); ++companiesnamesiterator) //iteration for each company
@@ -54,7 +53,6 @@ void PrintSorted::sortHierarchyAndPrint(const std::vector<std::vector<std::strin
         displayhierarchy.displayHierarchy(companiesInfo);
 
     }
-
 
 }
 
