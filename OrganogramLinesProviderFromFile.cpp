@@ -5,11 +5,12 @@ std::vector<std::vector<std::string>> OrganogramLinesProviderFromFile::getOrgano
 {
     std::ifstream file(_fileName);
     std::vector <std::vector<std::string>> results; //big vector which contains all rows
+        try
+        {
 
             if (!file.is_open())
             {
-                    std::cerr << "Nie udalo sie otworzyc pliku.\n";
-                    return results;
+                throw std::runtime_error("unable to open companies_data.csv");
             }
 
             while (std::getline(file,line))
@@ -28,6 +29,12 @@ std::vector<std::vector<std::string>> OrganogramLinesProviderFromFile::getOrgano
 
             }
 
-return results;
-file.close();
+            return results;
+        }
+
+        catch (const std::exception& e)
+        {
+            std::cerr << "Error: " << e.what() << "\n";
+        }
+    file.close();
 }
