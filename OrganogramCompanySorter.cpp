@@ -48,7 +48,7 @@ void PrintSorted::PrintsortedHierarchy(const std::vector<std::vector<std::string
 
         PersonalInfo::PersonalInfoIndex root = companiesInfo[0];
 
-        std::cout << *companiesnamesiterator << "\n" << root.id << " " << root.parentid << " " << root.name << " " << root.lastname << "\n";
+        std::cout << *companiesnamesiterator << "\n" << root.name << root.lastname << ", " << root.company << ", " << root.position << "\n";
         DisplayHierarchy displayhierarchy;
         displayhierarchy.displayHierarchy(companiesInfo);
 
