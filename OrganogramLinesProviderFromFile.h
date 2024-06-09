@@ -17,7 +17,7 @@ public:
 
         explicit OrganogramLinesProviderFromFile(const std::string& fileName)
         {
-            _fileName = fileName.c_str();
+            _fileName = fileName;
 
         }
 
