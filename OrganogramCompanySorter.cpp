@@ -1,13 +1,11 @@
 #include "OrganogramCompanySorter.h"
-#include <algorithm>
-#include <iostream>
 
 
 //this function creates 'leave' vector per company
 std::vector<PersonalInfo::PersonalInfoIndex> CompanySort::createLeaveForRoot(const std::vector<PersonalInfo::PersonalInfoIndex> &companiesInfo, const PersonalInfo::PersonalInfoIndex &root)
 {
 
-std::vector<PersonalInfo::PersonalInfoIndex> leaves;
+    std::vector<PersonalInfo::PersonalInfoIndex> leaves;
     for (const auto& per: companiesInfo)
     {
         if (per.parentid == root.id)
@@ -19,7 +17,7 @@ std::vector<PersonalInfo::PersonalInfoIndex> leaves;
 
 }
 
-void CompanySort::sortByIDlinked( std::vector<PersonalInfo::PersonalInfoIndex>& object) //this function sorts vector by parentid
+void CompanySort::sortByParentID(std::vector<PersonalInfo::PersonalInfoIndex>& object) //this function sorts vector by parentid
 {
     std::sort(object.begin(), object.end(), [](const PersonalInfo::PersonalInfoIndex &a, const PersonalInfo::PersonalInfoIndex &b)
     {
@@ -28,7 +26,7 @@ void CompanySort::sortByIDlinked( std::vector<PersonalInfo::PersonalInfoIndex>& 
 
 }
 
-void CompanySort::sortByID( std::vector<PersonalInfo::PersonalInfoIndex>& object) //this function sorts vector by id
+void CompanySort::sortByID(std::vector<PersonalInfo::PersonalInfoIndex>& object) //this function sorts vector by id
 {
     std::sort(object.begin(), object.end(), [](const PersonalInfo::PersonalInfoIndex &a, const PersonalInfo::PersonalInfoIndex &b)
     {
@@ -47,14 +45,13 @@ void CompanySort::sortHierarchy(const std::vector<std::vector<std::string>>&res,
         PersonalInfo personalinfoindex;
         auto companiesInfo = personalinfoindex.createPersonalInfoIndexVector(res, *companiesnamesiterator);
 
-        sortByIDlinked(companiesInfo);
+        sortByParentID(companiesInfo);
 
         PersonalInfo::PersonalInfoIndex root = companiesInfo[0];
 
         std::cout << *companiesnamesiterator << "\n" << root.id << " " << root.parentid << " " << root.name << " " << root.lastname << "\n";
         DisplayHierarchy displayhierarchy;
         displayhierarchy.displayHierarchy(companiesInfo);
-
 
     }
 

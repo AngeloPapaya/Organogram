@@ -72,16 +72,12 @@
 	<string>
 	<set>
 
-1717846140 source:c:\users\angelopapaya\documents\c++\organogram\organogram\program.cpp
+1717951144 source:c:\users\angelopapaya\documents\c++\organogram\organogram\program.cpp
 	"OrganogramLinesProviderFromFile.h"
 	"OrganogramPersonalInfo.h"
 	"OrganogramDisplay.h"
 	"OrganogramCompanySorter.h"
 	"OrganogramCompaniesName.h"
-	<vector>
-	<iostream>
-	<algorithm>
-	<set>
 
 1717357488 source:c:\users\angelopapaya\documents\c++\organogram\organogram\menuoption.cpp
 	"MenuOption.h"
@@ -90,24 +86,24 @@
 1717358996 c:\users\angelopapaya\documents\c++\organogram\organogram\menuoption.h
 	<string>
 
-1717843974 source:c:\users\angelopapaya\documents\c++\organogram\organogram\organogramdisplay.cpp
+1717951131 source:c:\users\angelopapaya\documents\c++\organogram\organogram\organogramdisplay.cpp
 	"OrganogramDisplay.h"
 	"OrganogramPersonalInfo.h"
 
-1717842332 c:\users\angelopapaya\documents\c++\organogram\organogram\organogramdisplay.h
+1717951132 c:\users\angelopapaya\documents\c++\organogram\organogram\organogramdisplay.h
 	<vector>
 	<iostream>
 	"OrganogramCompanySorter.h"
 	"OrganogramPersonalInfo.h"
 
-1717846792 source:c:\users\angelopapaya\documents\c++\organogram\organogram\organogramcompanysorter.cpp
+1717951058 source:c:\users\angelopapaya\documents\c++\organogram\organogram\organogramcompanysorter.cpp
 	"OrganogramCompanySorter.h"
-	<algorithm>
-	<iostream>
 
-1717842253 c:\users\angelopapaya\documents\c++\organogram\organogram\organogramcompanysorter.h
+1717950518 c:\users\angelopapaya\documents\c++\organogram\organogram\organogramcompanysorter.h
 	"OrganogramDisplay.h"
 	"OrganogramPersonalInfo.h"
+	<algorithm>
+	<iostream>
 
 1717789139 source:/home/ricoevil13/Organogram/Organogram/OrganogramCompanySorter.cpp
 	"OrganogramCompanySorter.h"
@@ -176,7 +172,7 @@
 	<string>
 	<vector>
 
-1717841562 source:c:\users\angelopapaya\documents\c++\organogram\organogram\organogramcompaniesname.cpp
+1717951025 source:c:\users\angelopapaya\documents\c++\organogram\organogram\organogramcompaniesname.cpp
 	"OrganogramCompaniesName.h"
 
 1717842337 c:\users\angelopapaya\documents\c++\organogram\organogram\organogramcompaniesname.h

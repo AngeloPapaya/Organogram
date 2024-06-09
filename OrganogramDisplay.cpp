@@ -1,7 +1,6 @@
 #include "OrganogramDisplay.h"
 #include "OrganogramPersonalInfo.h"
 
-
 void DisplayHierarchy::displayHierarchy(const std::vector<PersonalInfo::PersonalInfoIndex> &companiesInfo)
 {
     CompanySort companysort;
