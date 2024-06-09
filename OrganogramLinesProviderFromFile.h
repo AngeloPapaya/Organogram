@@ -18,7 +18,6 @@ public:
         explicit OrganogramLinesProviderFromFile(const std::string& fileName)
         {
             _fileName = fileName;
-
         }
 
     std::vector<std::vector<std::string>> getOrganogramLines();
